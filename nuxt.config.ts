@@ -6,10 +6,17 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    'nuxt-mongoose',
   ],
   eslint: {
     config: {
       stylistic: true,
     },
+  },
+  mongoose: {
+    uri: process.env.MONGODB_URI,
+    options: {},
+    modelsDir: 'models',
+    devtools: true,
   },
 })
