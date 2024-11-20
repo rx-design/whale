@@ -6,15 +6,20 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "dotenvx run -- nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "docker:mongodb": "docker run -d --name mongodb -p 27017:27017 mongodb/mongodb-community-server:latest"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.7.1",
     "nuxt": "^3.14.1592",
+    "nuxt-mongoose": "^1.0.6",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.24.4"
   }
 }
