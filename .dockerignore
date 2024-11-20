@@ -31,3 +31,6 @@ logs
 
 # Docker
 Dockerfile
+
+# ESLint
+eslint.config.mjs
