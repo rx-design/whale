@@ -29,4 +29,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    coinGeckoApiKey: process.env.COINGECKO_API_KEY,
+  },
 })
