@@ -1,0 +1,20 @@
+{
+  "coins": [
+    {
+      "id": "tether",
+      "symbol": "usdt",
+      "name": "Tether"
+    },
+    {
+      "id": "the-open-network",
+      "symbol": "ton",
+      "name": "Toncoin"
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "binance",
+      "name": "Binance"
+    }
+  ]
+}
