@@ -19,4 +19,14 @@ export default defineNuxtConfig({
     modelsDir: 'models',
     devtools: true,
   },
+  nitro: {
+    experimental: {
+      tasks: true,
+    },
+    scheduledTasks: {
+      '* * * * *': [
+        'prices:update',
+      ],
+    },
+  },
 })
