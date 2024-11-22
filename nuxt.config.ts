@@ -3,11 +3,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/test-utils/module',
+    '@nuxtjs/tailwindcss',
+    '@primevue/nuxt-module',
     'nuxt-mongoose',
   ],
   devtools: {
     enabled: true,
   },
+  css: ['~/assets/css/main.css'],
   runtimeConfig: {
     coinGeckoApiKey: process.env.COINGECKO_API_KEY,
   },
@@ -32,5 +35,14 @@ export default defineNuxtConfig({
     options: {},
     modelsDir: 'models',
     devtools: true,
+  },
+  primevue: {
+    options: {
+      theme: 'none',
+    },
+  },
+  tailwindcss: {
+    cssPath: false,
+    viewer: false,
   },
 })
