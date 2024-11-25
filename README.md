@@ -1,75 +1,67 @@
-# Nuxt Minimal Starter
+# Whale test assignment
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Tech stack:
+
+### [Nuxt 3](https://nuxt.com/docs/getting-started/introduction)
+
+Nuxt 3 is a modern, full-stack JavaScript framework built on Vue 3 and Vite, designed for building high-performance,
+server-side rendered (SSR) and static web applications with developer-friendly features.
+
+### [MongoDB (Mongoose)](https://nuxt.com/modules/nuxt-mongoose)
+
+MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like BSON format, enabling high
+scalability, performance, and support for dynamic schemas.
+
+### [PrimeVue](https://tailwind.primevue.org/nuxt/)
+
+PrimeVue is a comprehensive and customizable UI component library for Vue.js, offering a wide range of ready-to-use
+components to streamline web application development.
 
 ## Setup
 
-Make sure to install dependencies:
+### Prepare environment:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+cp .env.example .env
+cp .env.example .env.test
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Install dependencies:
 
 ```bash
-# npm
+npm ci
+```
+
+### Start database
+
+```bash
+npm run docker:mongodb
+```
+
+### Start dev server:
+
+```bash
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Quick links:
 
-Build the application for production:
+### Check database status:
+http://localhost:3000/api/status
 
-```bash
-# npm
-npm run build
+### Update prices:
+http://localhost:3000/api/prices/update
 
-# pnpm
-pnpm build
+### Check TON/USDT price:
+http://localhost:3000/api/prices/TON_USDT
 
-# yarn
-yarn build
+### Homepage:
+http://localhost:3000/
 
-# bun
-bun run build
-```
+## TO-DO
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [I18n](https://nuxt.com/modules/i18n)
+- [e2e tests](https://nuxt.com/docs/getting-started/testing#end-to-end-testing)
+- [Dockerized app](https://docs.docker.com/reference/dockerfile/)
+- [Encrypted env variables](https://dotenvx.com/docs/platforms/docker#encrypt-production)
+- [CI/CD](https://github.com/features/actions)
